@@ -36,7 +36,10 @@ const Logic = ({ quotes }) => {
   const updateColors = () => {
     const color = getRandomColor();
     document.body.style.backgroundColor = color;
-    document.querySelector('.button').style.backgroundColor = color;
+    const buttons = document.querySelectorAll('.button');
+    buttons.forEach(function(button) {
+    button.style.backgroundColor = color;
+    });
   };
 
   const getQuote = () => {
